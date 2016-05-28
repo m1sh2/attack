@@ -1,0 +1,14 @@
+<scores>
+	<score *ngFor="let score of scores" [class.active]="score.score === _score">{{score.score}}</score>
+</scores>
+<h2>Score: {{score}}</h2>
+<div class="blocks">
+	<div class="block" *ngFor="let block of blocks" [class.active]="block.active" [class.stop]="block.stop"></div>
+</div>
+
+<controls>
+	<button type="button" class="control left" (click)="Control('left')">Left</button>
+	<button type="button" class="control play" (click)="Control('play')" [hidden]="play">Play</button>
+	<button type="button" class="control pause" (click)="Control('pause')" [hidden]="!play">Pause</button>
+	<button type="button" class="control right" (click)="Control('right')">Right</button>
+</controls>

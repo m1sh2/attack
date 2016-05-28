@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<base href="/">
+		<title>ABlocks</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/images/favicon.png" />
+
+		<!-- inject:css -->
+		<link rel="stylesheet" href="/assets/styles/reset.css">
+		<link rel="stylesheet" href="/assets/styles/style.css">
+		<!-- endinject -->
+
+		<!-- Independent libs -->
+		<script type="text/javascript">
+			const css = "color:white; padding-top:2px; padding-bottom:2px;";
+			console.log("%c  ABlocks %s  ", "background: #FF3232;" + css, '0.0.49');
+		</script>
+
+		<!-- inject:js -->
+		<script src="/app/libs/es6-shim.min.js"></script>
+		<script src="/app/libs/zone.js"></script>
+		<script src="/app/libs/Reflect.js"></script>
+		<script src="/app/libs/system.src.js"></script>
+		<script src="/app/libs/angular2.js"></script>
+		<!-- endinject -->
+
+		<!-- 2. Configure SystemJS -->
+		<script src="app/systemjs.conf.js"></script>
+		<script>
+			System.import('app').catch(function(err){ console.error(err); });
+		</script>
+	</head>
+	<body>
+		<app><div class="loading"></div></app>
+		
+	</body>
+</html>

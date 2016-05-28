@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<base href="/">
+		<title>ABlocks</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="./assets/images/favicon.png" />
+
+		<!-- inject:css -->
+		<!-- endinject -->
+
+		<!-- Independent libs -->
+		<script type="text/javascript">
+			const css = "color:white; padding-top:2px; padding-bottom:2px;";
+			console.log("%c  {{name}} %s  ", "background: #FF3232;" + css, '{{version}}');
+		</script>
+
+		<!-- inject:js -->
+		<!-- endinject -->
+
+		<!-- 2. Configure SystemJS -->
+		<script src="app/systemjs.conf.js"></script>
+		<script>
+			System.import('app').catch(function(err){ console.error(err); });
+		</script>
+	</head>
+	<body>
+		<app><div class="loading"></div></app>
+		
+	</body>
+</html>
